@@ -7802,8 +7802,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Amy Clarke and Emma Reynolds - Salaries in Chicago
-amyemma.github.io #MUST BE HYPER LINK</p>
+<h1 id="Amy-Clarke-and-Emma-Reynolds---Salaries-in-Chicago">Amy Clarke and Emma Reynolds - Salaries in Chicago<a class="anchor-link" href="#Amy-Clarke-and-Emma-Reynolds---Salaries-in-Chicago">¶</a></h1><h3 id="Click-to-view-our-website"><a href="https://amybarbaraclarke.github.io/amyandemma/">Click to view our website</a><a class="anchor-link" href="#Click-to-view-our-website">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7814,7 +7813,7 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The dataset we will be working with is ‘Current Employee Names, Salaries, and Position Titles’ in the city of Chicago (<a href="https://catalog.data.gov/dataset/current-employee-names-salaries-and-position-titles">https://catalog.data.gov/dataset/current-employee-names-salaries-and-position-titles</a>). The goals for our project are to answer multiple questions with this data, focusing on the salary variability within and across different departments. We want to investigate if salary is greater within or across each department, if there are similar/same job titles in different departments that aren’t paid equally, what the range/mean/median of salaries are across each department, and how spread out the salaries are. We will graph our results and state concrete conclusions.</p>
+<h3 id="Description">Description<a class="anchor-link" href="#Description">¶</a></h3><p>The dataset we will be working with is ‘Current Employee Names, Salaries, and Position Titles’ in the city of Chicago (<a href="https://catalog.data.gov/dataset/current-employee-names-salaries-and-position-titles">https://catalog.data.gov/dataset/current-employee-names-salaries-and-position-titles</a>). The goals for our project are to answer multiple questions with this data, focusing on the salary variability within and across different departments. We want to investigate if salary is greater within or across each department, if there are similar/same job titles in different departments that aren’t paid equally, what the range/mean/median of salaries are across each department, and how spread out the salaries are. We will graph our results and state concrete conclusions.</p>
 </div>
 </div>
 </div>
@@ -7825,26 +7824,7 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Collaboration Plan: Amy and I will meet twice a week to ensure we are working on our project accordingly. We are the same major, and have class together everyday, so we plan to meet after data science Monday and after our Thursday class at 12:30. We have worked together before on computer science projects, and we divide work evenly and clearly beforehand so no one feels as if their workload is unfair. We also communicate very well together, and we will be using  Python, pandas, maplotlib, and more to come.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
-</pre></div>
-</div>
+<h3 id="Collaboration-Plan:">Collaboration Plan:<a class="anchor-link" href="#Collaboration-Plan:">¶</a></h3><p>Amy and I will meet twice a week to ensure we are working on our project accordingly. We are the same major, and have class together everyday, so we plan to meet after data science Monday and after our Thursday class at 12:30. We have worked together before on computer science projects, and we divide work evenly and clearly beforehand so no one feels as if their workload is unfair. We also communicate very well together, and we will be using  Python, pandas, maplotlib, and more to come.</p>
 </div>
 </div>
 </div>
@@ -7853,10 +7833,63 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">current</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/content/Current_Employee_Names__Salaries__and_Position_Titles.csv'</span><span class="p">)</span>
+<div class="highlight hl-python"><pre><span></span><span class="c1">#Import the needed libraries</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+
+<span class="c1">#Import tools for colab</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+
+<span class="c1"># Mount Google Drive so the notebook can access files</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Loading-the-Dataset">Loading the Dataset<a class="anchor-link" href="#Loading-the-Dataset">¶</a></h3><p>Here we will load in the Chicago Employee dataset into a pandas dataframe. The dataset includes emplyee names, job titles, department, full or part-time, salary/hourly, typical hours, annual salary, hourly rate. We then preview the first 50 rows of the dataset to understand the structure and variables included.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="c1">#Read the dataset into a dataframe</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/content/Current_Employee_Names__Salaries__and_Position_Titles.csv'</span><span class="p">)</span>
+
+<span class="c1">#Print the fifty rows for inspection</span>
 <span class="n">current</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -7868,9 +7901,9 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-caf6ecd5-3de0-4386-b52e-1b61bcd74822">
+<div class="colab-df-container" id="df-1c3604f1-1352-421d-842b-1c48741b46eb">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -8455,7 +8488,7 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-caf6ecd5-3de0-4386-b52e-1b61bcd74822')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-1c3604f1-1352-421d-842b-1c48741b46eb')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -8502,12 +8535,12 @@ amyemma.github.io #MUST BE HYPER LINK</p>
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-caf6ecd5-3de0-4386-b52e-1b61bcd74822 button.colab-df-convert');
+        document.querySelector('#df-1c3604f1-1352-421d-842b-1c48741b46eb button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-caf6ecd5-3de0-4386-b52e-1b61bcd74822');
+        const element = document.querySelector('#df-1c3604f1-1352-421d-842b-1c48741b46eb');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -8531,16 +8564,32 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Cleaning-Column-Names">Cleaning Column Names<a class="anchor-link" href="#Cleaning-Column-Names">¶</a></h3><p>We want to strip each column name of any leading or tailing whitespace to ensure easy referencing. We also want to remove any columns that will not be used in our analysis.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">current</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<div class="highlight hl-python"><pre><span></span><span class="c1">#Strip the columns of whitespace</span>
+<span class="n">current</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="c1">#Print the column names to verify</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+
+<span class="c1">#Remove unnecessary columns</span>
 <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">,</span> <span class="s1">'Full or Part-Time'</span><span class="p">]</span> <span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8560,18 +8609,34 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Convert-Hourly-Wages-to-Annual-Salary">Convert Hourly Wages to Annual Salary<a class="anchor-link" href="#Convert-Hourly-Wages-to-Annual-Salary">¶</a></h3><p>Some employees are paid hourly. In order to make them comparable across employees, we estimate the annual salary using the equation:</p>
+<p>Annual salary = Hourly Rate x Typical Hours x 52 Weeks</p>
+<p>Once this is done, we further clean the data by dropping the typical hours column, as it will no longer be used.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">current</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+<div class="highlight hl-python"><pre><span></span><span class="c1">#Convery hourly to annual salary using above equation</span>
+<span class="n">current</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
     <span class="p">(</span><span class="n">current</span><span class="p">[</span><span class="s1">'Salary or Hourly'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'HOURLY'</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">current</span><span class="p">[</span><span class="s1">'Annual Salary'</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()),</span>
     <span class="s1">'Annual Salary'</span>
 <span class="p">]</span> <span class="o">=</span> <span class="n">current</span><span class="p">[</span><span class="s1">'Hourly Rate'</span><span class="p">]</span> <span class="o">*</span> <span class="n">current</span><span class="p">[</span><span class="s1">'Typical Hours'</span><span class="p">]</span> <span class="o">*</span> <span class="mi">52</span>
+
+<span class="c1">#Drop Typical Hours column</span>
 <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Typical Hours'</span><span class="p">]</span> <span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
 <span class="n">current</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -8584,9 +8649,9 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-9b1d5d83-b44e-40d8-8ad2-e638aa0246f2">
+<div class="colab-df-container" id="df-8c6b8c8c-c548-4ae8-a19f-1c68c28d40c7">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -8658,7 +8723,7 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-9b1d5d83-b44e-40d8-8ad2-e638aa0246f2')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-8c6b8c8c-c548-4ae8-a19f-1c68c28d40c7')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -8705,12 +8770,12 @@ amyemma.github.io #MUST BE HYPER LINK</p>
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-9b1d5d83-b44e-40d8-8ad2-e638aa0246f2 button.colab-df-convert');
+        document.querySelector('#df-8c6b8c8c-c548-4ae8-a19f-1c68c28d40c7 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-9b1d5d83-b44e-40d8-8ad2-e638aa0246f2');
+        const element = document.querySelector('#df-8c6b8c8c-c548-4ae8-a19f-1c68c28d40c7');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -8734,12 +8799,24 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Sorting-the-Dataset">Sorting the Dataset<a class="anchor-link" href="#Sorting-the-Dataset">¶</a></h2><p>To make the dataset easier to analyze, we sort the data by <strong>Department</strong> and then by <strong>Job Title</strong>.<br/>
+This way, we group similar positions and departments together for later analysis.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'Department'</span><span class="p">,</span> <span class="s1">'Job Titles'</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -8754,9 +8831,9 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-36975c56-b6c2-4adb-99ff-7ef097082484">
+<div class="colab-df-container" id="df-4f38197d-6255-43bf-8ae4-89b327041d64">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -8828,7 +8905,7 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-36975c56-b6c2-4adb-99ff-7ef097082484')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-4f38197d-6255-43bf-8ae4-89b327041d64')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -8875,12 +8952,12 @@ amyemma.github.io #MUST BE HYPER LINK</p>
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-36975c56-b6c2-4adb-99ff-7ef097082484 button.colab-df-convert');
+        document.querySelector('#df-4f38197d-6255-43bf-8ae4-89b327041d64 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-36975c56-b6c2-4adb-99ff-7ef097082484');
+        const element = document.querySelector('#df-4f38197d-6255-43bf-8ae4-89b327041d64');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -8904,15 +8981,47 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Sources">Sources<a class="anchor-link" href="#Sources">¶</a></h3><p>City of Chicago Employee Salary Dataset
+<a href="https://catalog.data.gov/dataset/current-employee-names-salaries-and-position-titles">https://catalog.data.gov/dataset/current-employee-names-salaries-and-position-titles</a></p>
+<p>Libraries used:</p>
+<ul>
+<li>Python</li>
+<li>matplotlib</li>
+<li>numpy</li>
+</ul>
+<p>Google Colab documentation
+<a href="https://colab.research.google.com/">https://colab.research.google.com/</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Exporting-the-Notebook">Exporting the Notebook<a class="anchor-link" href="#Exporting-the-Notebook">¶</a></h3><p>Finally, we convert our notebook to HTML and export it so we can upload it to our github.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="n">Milestone_1</span><span class="o">.</span><span class="n">ipynb</span>
+<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">"Milestone_1.html"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8926,35 +9035,15 @@ amyemma.github.io #MUST BE HYPER LINK</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>[NbConvertApp] Converting notebook Milestone_1.ipynb to html
-[NbConvertApp] Writing 322247 bytes to Milestone_1.html
+[NbConvertApp] Writing 335305 bytes to Milestone_1.html
 </pre>
 </div>
 </div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">"Milestone_1.html"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="6ad821cf-5795-4a8d-8cfd-281da34b2045" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="b55e9f0f-a41c-4eb2-8de3-bc496d818da4" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('6ad821cf-5795-4a8d-8cfd-281da34b2045');
+var element = document.getElementById('b55e9f0f-a41c-4eb2-8de3-bc496d818da4');
 
     async function download(id, filename, size) {
       if (!google.colab.kernel.accessAllowed) {
@@ -9001,10 +9090,10 @@ var element = document.getElementById('6ad821cf-5795-4a8d-8cfd-281da34b2045');
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="77e75388-2443-4036-949d-c00fbdff62ba" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="245ed93c-93cf-4201-8d09-90ff513add88" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('77e75388-2443-4036-949d-c00fbdff62ba');
-download("download_95220d7e-8548-483d-9e44-adec43e19e50", "Milestone_1.html", 322263)
+var element = document.getElementById('245ed93c-93cf-4201-8d09-90ff513add88');
+download("download_5fb7d46a-29c9-40c9-aa05-bffe237daf77", "Milestone_1.html", 335334)
 </script>
 </div>
 </div>
