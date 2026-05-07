@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>finalTutorial</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>AmyandEmma</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -11122,7 +11122,6 @@ dtype: int64
 <p>Outline of Steps:</p>
 <ol>
 <li>Data selection and prep
--Merge datasets
 -Select desired variables:
 -total_budget
 -employee_count
@@ -11286,11 +11285,9 @@ Average CV R²: -3.1483128000746126
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Multiple-Linear-Regression-Model-Analysis">Multiple Linear Regression Model Analysis<a class="anchor-link" href="#Multiple-Linear-Regression-Model-Analysis">¶</a></h3><p>The improved multiple linear regression model was used to predict departmental budgets using employee count, average salary, median salary, and budget per employee. Standardization was applied to reduce the impact of differing variable scales, and 5-fold cross-validation was incorporated to evaluate model generalizability.</p>
-<p>The scatterplot comparing actual and predicted departmental budgets shows that the model captures some overall trends in departmental funding, although prediction errors remain substantial for several departments. Larger departments with exceptionally high budgets were more difficult for the model to accurately predict, suggesting the presence of nonlinear relationships or omitted variables.</p>
-<p>The residual plot further demonstrates variability in prediction accuracy. Residuals are not evenly distributed around zero, indicating that the model may not fully capture the complexity of municipal budgeting structures. Departments with specialized operational costs, infrastructure requirements, or unusually large expenditures likely contribute to these inconsistencies.</p>
-<p>Cross-validation results provide additional evidence regarding model stability. While some predictive relationship exists between salary metrics and departmental budgets, the relatively weak R² values suggest that budget allocation depends on many additional factors beyond employee compensation alone. Variables such as equipment costs, public safety funding, infrastructure spending, and administrative priorities are likely important contributors not represented in the dataset.</p>
-<p>Overall, the improved regression model demonstrates moderate predictive capability while highlighting the challenges of modeling large-scale municipal budgeting systems using a limited set of financial variables.</p>
+<h3 id="Multiple-Linear-Regression-Model-Analysis">Multiple Linear Regression Model Analysis<a class="anchor-link" href="#Multiple-Linear-Regression-Model-Analysis">¶</a></h3><p>The improved multiple linear regression model was used to predict departmental budgets using employee count, average salary, median salary, and budget per employee. Standardization was applied to reduce the impact of differing variable scales, and 5-fold cross-validation was incorporated to evaluate model generalizability. The scatterplot comparing actual and predicted departmental budgets shows that the model captures some overall trends in departmental funding, although prediction errors remain substantial for several departments. Larger departments with exceptionally high budgets were more difficult for the model to accurately predict, implying the presence of nonlinear relationships or omitted variables.</p>
+<p>The residual plot further shows variability in prediction accuracy. Residuals are not evenly distributed around zero, indicating that the model may not fully capture the complexity of budgeting structures. Departments with specialized operational costs or unusually large expenditures likely contribute to these inconsistencies. Cross-validation results provide additional evidence regarding model stability. While some predictive relationship exists between salary metrics and departmental budgets, the weak R² values suggest that budget allocation depends on many additional factors beyond employee compensation alone. Variables such as equipment costs and public safety funding not represented in the dataset.</p>
+<p>In summary, the improved regression model demonstrates moderate predictive capability while highlighting the challenges of modeling large-scale municipal budgeting systems using a limited set of financial variables.</p>
 </div>
 </div>
 </div>
@@ -11438,10 +11435,21 @@ Average CV R²: -14.408947346532258
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="KNN-Regression-Model-Analysis">KNN Regression Model Analysis<a class="anchor-link" href="#KNN-Regression-Model-Analysis">¶</a></h3><p>The KNN regression model produced relatively weak predictive performance when estimating budget per employee using departmental salary statistics and employee counts. The model resulted in an R² value of approximately -0.57, indicating that the model performed worse than simply predicting the average value across all departments. Additionally, the RMSE and MAE values were relatively large, suggesting substantial prediction error between actual and predicted budget allocations.</p>
-<p>The scatterplot comparing actual versus predicted budget per employee further demonstrates the model’s limitations. If the model were highly accurate, most points would fall close to the diagonal reference line. Instead, the points are widely dispersed, indicating that the KNN model struggled to capture the relationship between salary characteristics and departmental budgeting patterns.</p>
-<p>The cross-validation results also showed significant instability across folds, with several strongly negative R² scores. This suggests the model does not generalize well to unseen data and may be affected by the relatively small dataset size and the presence of extreme outliers. Departments with unusually large budgets or specialized funding structures likely introduce substantial variability that KNN cannot effectively model using only salary and employee count variables.</p>
-<p>Despite the weak predictive accuracy, the model still provides valuable insight into the complexity of municipal budgeting. The results suggest that departmental budgets are influenced by many additional factors not included in this analysis, such as operational costs, infrastructure expenses, overtime, equipment needs, public safety funding, and administrative priorities. Overall, the KNN model demonstrates that salary-related variables alone are insufficient for accurately predicting budget allocation patterns across Chicago departments.</p>
+<h3 id="KNN-Regression-Model-Analysis">KNN Regression Model Analysis<a class="anchor-link" href="#KNN-Regression-Model-Analysis">¶</a></h3><p>The KNN regression model produced relatively weak predictive performance when estimating budget per employee using departmental salary statistics and employee counts. The model resulted in an R² value of approximately -0.57, indicating that the model performed worse than simply predicting the average value across all departments. Additionally, the RMSE and MAE values were  large, suggesting prediction error between actual and predicted budget.</p>
+<p>The scatterplot comparing actual versus predicted budget per employee further demonstrates the model’s limitations. The points are widely dispersed, indicating that the KNN model struggled to capture the relationship between salary characteristics and departmental budgeting patterns. Additionally, the cross-validation results also showed significant instability across folds, with several strongly negative R² scores. This suggests the model does not generalize well to unseen data and may be affected by the relatively small dataset size and the presence of extreme outliers. Departments with unusually large budgets or specialized funding structures likely introduce substantial variability that KNN cannot effectively model using only salary and employee count variables.</p>
+<p>The results suggest that departmental budgets are influenced by many additional factors not included in this analysis, such as operational costs, infrastructure expenses, overtime, equipment needs, public safety funding, and administrative priorities. Overall, the KNN model demonstrates that salary-related variables alone are insufficient for accurately predicting budget allocation patterns across Chicago departments.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Model-Comparsion">Model Comparsion<a class="anchor-link" href="#Model-Comparsion">¶</a></h3><p>The multiple linear regression model assumes a linear relationship between the independent variables and the target variable. Linear regression is highly interpretable, allowing us to understand how each feature contributes to budget predictions. The model was able to capture some broad trends in departmental funding, but prediction accuracy remained limited, especially for departments with exceptionally large budgets or unusual operational structures. On the other hand, the KNN regression model does not assume a linear relationship between variables and can potentially capture more complex patterns. However, because the dataset contained relatively few departments and several extreme outliers, the KNN model performed poorly and struggled to generalize during cross-validation. The model was highly sensitive to the structure of the data and produced unstable predictions across folds.</p>
+<p>Overall, the multiple linear regression model performed better in terms of interpretability and consistency, while the KNN model demonstrated the limitations of non-parametric methods on small datasets with high variability. Both models suggest that salary and workforce characteristics alone are insufficient for accurately predicting municipal budgets. Additional variables such as infrastructure costs, overtime, capital projects, public safety expenditures, and administrative priorities would likely improve predictive performance in future analyses.</p>
 </div>
 </div>
 </div>
@@ -11668,8 +11676,7 @@ Average CV R²: -14.408947346532258
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Final-Conclusion">Final Conclusion<a class="anchor-link" href="#Final-Conclusion">¶</a></h2><p>Overall, the analysis shows that salary patterns and employee counts provide some insight into Chicago departmental budgeting, but they do not fully explain budget allocation. EDA revealed meaningful differences in salary distributions across departments, especially through median salaries, percentiles, and outliers. The Fire and Police Departments showed relatively high salary levels, while departments such as Aviation and Water Management demonstrated that large budgets may be driven by infrastructure and operational costs rather than salary alone.</p>
-<p>The modeling results support this conclusion. The multiple linear regression and KNN models both struggled to make consistently accurate predictions, especially for departments with unusually large budgets. This suggests that department budgets are shaped by more than workforce size and employee compensation. Future analysis would be stronger if it included overtime, benefits, capital spending, equipment costs, and service-level demand.</p>
+<h2 id="Final-Conclusion">Final Conclusion<a class="anchor-link" href="#Final-Conclusion">¶</a></h2><p>In conclusion, the analysis shows that salary patterns and employee counts provide some insight into Chicago departmental budgeting, but they do not fully explain budget allocation. EDA revealed meaningful differences in salary distributions across departments, especially through median salaries, percentiles, and outliers. The Fire and Police Departments showed relatively high salary levels, while departments such as Aviation and Water Management demonstrated that large budgets may be driven by infrastructure and operational costs rather than salary alone. The modeling results support this conclusion. The multiple linear regression and KNN models both struggled to make consistently accurate predictions, especially for departments with unusually large budgets. This suggests that department budgets are shaped by more than workforce size and employee compensation. Future analysis would be stronger if it included overtime, benefits, capital spending, equipment costs, and service-level demand.</p>
 </div>
 </div>
 </div>
